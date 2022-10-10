@@ -10,7 +10,7 @@
     <application>
         <service android:name="com.mackentoch.beaconsandroid.BeaconsAndroidTransitionService"/>
 
-        <receiver android:name="com.mackentoch.beaconsandroid.BeaconsAndroidBootReceiver">
+        <receiver android:name="com.mackentoch.beaconsandroid.BeaconsAndroidBootReceiver" android:exported="false">
 			<intent-filter>
 				<action android:name="android.intent.action.BOOT_COMPLETED"/>
 			</intent-filter>
