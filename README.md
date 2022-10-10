@@ -1,11 +1,11 @@
-[![npm](https://img.shields.io/npm/l/@hkpuits/react-native-beacons-manager.svg)](https://github.com/benlui/react-native-beacons-manager)
-[![npm](https://img.shields.io/npm/v/@hkpuits/react-native-beacons-manager.svg)](https://www.npmjs.com/package/@hkpuits/react-native-beacons-manager)
+[![npm](https://img.shields.io/npm/l/@mindsoftcreative/react-native-beacons-manager.svg)](https://github.com/benlui/react-native-beacons-manager)
+[![npm](https://img.shields.io/npm/v/@mindsoftcreative/react-native-beacons-manager.svg)](https://www.npmjs.com/package/@mindsoftcreative/react-native-beacons-manager)
 
-# @hkpuits/react-native-beacons-manager
+# @mindsoftcreative/react-native-beacons-manager
 
 ![logo](./images/RN-iBeacon.png)
 
-`@hkpuits/react-native-beacons-manager`: add beacon technology in your React Native application for both iOS and Android.
+`@mindsoftcreative/react-native-beacons-manager`: add beacon technology in your React Native application for both iOS and Android.
 
 This repository is born to keep alive and up to date these 3 original awesome:
 - [ibeacon for android](https://github.com/mmazzarolo/react-native-beacons-android)
@@ -37,15 +37,15 @@ See [here](./CHANGELOG.md).
 ## **Getting started**
 *via npm:*
 ```
-$ npm install @hkpuits/react-native-beacons-manager --save
+$ npm install @mindsoftcreative/react-native-beacons-manager --save
 ```
 *or via yarn:*
 ```
-$ yarn add @hkpuits/react-native-beacons-manager
+$ yarn add @mindsoftcreative/react-native-beacons-manager
 ```
 (OPTIONAL) If autolinking is not available for your React Native project
 ```
-$ react-native link @hkpuits/react-native-beacons-manager
+$ react-native link @mindsoftcreative/react-native-beacons-manager
 ```
 
 ## **Notes for iOS implementation**
@@ -80,7 +80,7 @@ Just don't forget to activate
 
 ```js
 import { DeviceEventEmitter } from 'react-native'
-import Beacons from '@hkpuits/react-native-beacons-manager'
+import Beacons from '@mindsoftcreative/react-native-beacons-manager'
 
 // Define a region which can be identifier + uuid,
 // identifier + uuid + major or identifier + uuid + major + minor
@@ -149,7 +149,7 @@ const subscription = DeviceEventEmitter.addListener(
 
 ```js
 import { DeviceEventEmitter } from 'react-native'
-import Beacons from '@hkpuits/react-native-beacons-manager'
+import Beacons from '@mindsoftcreative/react-native-beacons-manager'
 
 // Tells the library to detect iBeacons
 Beacons.init(); // to set the NotificationChannel, and enable background scanning
