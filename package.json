@@ -1,5 +1,5 @@
 {
-  "name": "@mindsoftcreative/react-native-beacons-manager",
+  "name": "@drive-thru-dark-rides/react-native-beacons-manager",
   "version": "1.2.9",
   "description": "React-Native library for detecting beacons (iOS and Android)",
   "keywords": [
@@ -18,16 +18,16 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dbitkowski/react-native-beacons-manager.git"
+    "url": "https://github.com/drive-thru-dark-rides/react-native-beacons-manager.git"
   },
   "typescript": {
     "definition": "typings/react-native-beacons-manager.d.ts"
   },
   "types": "typings/react-native-beacons-manager.d.ts",
   "bugs": {
-    "url": "https://github.com/dbitkowski/react-native-beacons-manager/issues"
+    "url": "https://github.com/drive-thru-dark-rides/react-native-beacons-manager/issues"
   },
-  "homepage": "https://github.com/dbitkowski/react-native-beacons-manager#readme",
+  "homepage": "https://github.com/drive-thru-dark-rides/react-native-beacons-manager#readme",
   "main": "index.js",
   "directories": {
     "example": "examples"
