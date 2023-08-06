@@ -36,7 +36,7 @@ declare module '@drive-thru-dark-rides/react-native-beacons-manager' {
       distance: number,
       proximity: Proximity,
       accuracy?: number,
-    }
+    }[]
   }
 
   type BeaconEvents = {
