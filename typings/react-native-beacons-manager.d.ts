@@ -86,6 +86,8 @@ declare module '@drive-thru-dark-rides/react-native-beacons-manager' {
     PARSER_EDDYSTONE_UID: string;
     PARSER_EDDYSTONE_URL: string;
 
+    init(): void;
+
     setHardwareEqualityEnforced(
       flag: boolean
     ): void;
