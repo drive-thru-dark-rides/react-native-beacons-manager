@@ -1,10 +1,67 @@
-declare module 'react-native-beacons-manager' {
+class TypedEventEmitter<TEvents extends Record<string, any>> {
+  private emitter = new EventEmitter()
+
+  emit<TEventName extends keyof TEvents & string>(
+    eventName: TEventName,
+    ...eventArg: TEvents[TEventName]
+  ) {
+    this.emitter.emit(eventName, ...(eventArg as []))
+  }
+
+  on<TEventName extends keyof TEvents & string>(
+    eventName: TEventName,
+    handler: (...eventArg: TEvents[TEventName]) => void
+  ) {
+    this.emitter.on(eventName, handler as any)
+  }
+
+  off<TEventName extends keyof TEvents & string>(
+    eventName: TEventName,
+    handler: (...eventArg: TEvents[TEventName]) => void
+  ) {
+    this.emitter.off(eventName, handler as any)
+  }
+}
+
+declare module '@drive-thru-dark-rides/react-native-beacons-manager' {
 
   export interface BeaconRegion {
     identifier: string,
     uuid: string,
     minor?: number,
     major?: number
+  }
+
+  export interface MonitoringResponse {
+    identifier: string,
+    uuid: string,
+    minor: number,
+    major: number
+  }
+
+  export type Proximity = "unknown" | "immediate" | "near" | "far";
+
+  export interface RangingResponse {
+    region: {
+      identifier: string,
+      uuid: string,
+    },
+    beacons: {
+      uuid: string,
+      major?: number,
+      minor?: number,
+      rssi: number,
+      distance: number,
+      proximity: Proximity,
+      accuracy?: number,
+    }
+  }
+
+  type BeaconEvents = {
+    'beaconServiceConnected': [],
+    'regionDidEnter': [MonitoringResponse],
+    'regionDidExit': [MonitoringResponse],
+    'beaconsDidRange': [RangingResponse],
   }
 
   export type AuthorizationStatus =
@@ -141,6 +198,8 @@ declare module 'react-native-beacons-manager' {
         uuid?: string
       }
     ): Promise<any>;
+
+    BeaconsEventEmitter: TypedEventEmitter<BeaconEvents>
   }
 
   const beacons: Beacons;
